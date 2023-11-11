@@ -2,7 +2,7 @@
     <div class="app">
 
         <div class="container">
-    <h1>Hi</h1>
+    <h1>From</h1>
     <form>
       <div class="left">
         <div class="box-1">
@@ -63,8 +63,8 @@
           <td>info.about</td>
           <td>info.about</td>
           <td>
-            <button>Delete</button>
-            <button>Edit</button>
+            <button class="delete">Delete</button>
+            <button class="edit">Edit</button>
           </td>
         </tr>
         <tr>
@@ -75,8 +75,8 @@
           <td>info.about</td>
           <td>info.about</td>
           <td>
-            <button>Delete</button>
-            <button>Edit</button>
+            <button class="delete">Delete</button>
+            <button class="edit">Edit</button>
           </td>
         </tr>
         <tr>
@@ -87,8 +87,8 @@
           <td>info.about</td>
           <td>info.about</td>
           <td>
-            <button>Delete</button>
-            <button>Edit</button>
+            <button class="delete">Delete</button>
+            <button class="edit">Edit</button>
           </td>
         </tr>
       </table>
@@ -108,8 +108,8 @@ export default {};
   margin-top: 20px;
   
 }
-
-h1 {
+.container{
+    h1 {
   text-align: center;
   padding: 10px;
   font-size: 30px;
@@ -137,6 +137,7 @@ form {
     }
     label {
       font-size: 18px;
+      color: #333;
     }
     input {
       margin-top: 12px;
@@ -200,6 +201,8 @@ form {
 }
 }
 }
+}
+
 
 table {
     margin-top: 50px;
@@ -221,13 +224,29 @@ th {
 table,
   th,
   td {
-    border: 1px solid #86b7fe;
+    border: 1px solid rgba(147, 167, 187, 0.61);
     border-collapse: collapse;
   }
 
 tr:nth-child(odd) td {
   background: rgba(33, 37, 41, 0.07);
 }
-
+.delete{
+    background:orchid;
+    font-size:13px ;
+    padding: 6px 3px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid rgba(147, 167, 187, 0.61);
+}
+.edit{
+    background: #86b7fe;
+    font-size:13px ;
+    padding: 6px 8px;
+   
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px solid rgba(147, 167, 187, 0.61);
+}
 
 </style>
