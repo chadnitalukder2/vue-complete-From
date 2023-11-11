@@ -53,6 +53,31 @@
           <th>Brand</th>
           <th>Catagory</th>
           <th>Quantity</th>
+          <th>..</th>
+        </tr>
+        <tr>
+          <td>name </td>
+          <td>age</td>
+          <td> info</td>
+          <td>gender</td>
+          <td>info.about</td>
+          <td>info.about</td>
+          <td>
+            <button>Delete</button>
+            <button>Edit</button>
+          </td>
+        </tr>
+        <tr>
+          <td>name </td>
+          <td>age</td>
+          <td> info</td>
+          <td>gender</td>
+          <td>info.about</td>
+          <td>info.about</td>
+          <td>
+            <button>Delete</button>
+            <button>Edit</button>
+          </td>
         </tr>
         <tr>
           <td>name </td>
@@ -81,6 +106,7 @@ export default {};
   margin: 0 auto;
   max-width: 80%;
   margin-top: 20px;
+  
 }
 
 h1 {
@@ -116,7 +142,7 @@ form {
       margin-top: 12px;
       margin-bottom: 20px;
       padding: 10px;
-      border: 1px solid #ffe2d1;
+      border: 1px solid rgb(147 167 187 / 61%);
       border-radius: 6px;
       line-height: 1.7em;
       width: 100%;
@@ -145,7 +171,7 @@ form {
   padding: 13px 30px 13px;
   outline: 0;
   color:#333;
-  border: 1px solid #86b7fe ;
+  border:1px solid rgb(147 167 187 / 61%) ;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
   
@@ -175,15 +201,33 @@ form {
 }
 }
 
+table {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td, tr{
+  padding: 10px 15px;
+  border:1px solid rgb(147 167 187 / 61%);
+}
+th {
+  background: #ffe2d1;
+  color: #333;
+  text-align: center;
+}
 table,
   th,
   td {
-    border: 1px solid black;
+    border: 1px solid #86b7fe;
     border-collapse: collapse;
   }
-  table{
-    width: 100%;
-    margin-top: 50px;
-  }
+
+tr:nth-child(odd) td {
+  background: rgba(33, 37, 41, 0.07);
+}
+
 
 </style>
