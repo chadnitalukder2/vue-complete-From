@@ -45,21 +45,23 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Price</th>
             <th>Brand</th>
             <th>Catagory</th>
+            <th>Price</th>
             <th>Quantity</th>
+            <th>Total</th>
             <th>..</th>
         </tr>
         <tr v-for="(info, index) in details" :key="index">
             <td> {{info.id}} </td>
             <td>{{info.name}}</td>
-            <td> {{info.price}}</td>
             <td>{{info.brand}}</td>
             <td>{{info.catagory}}</td>
+            <td> {{info.price}}</td>
             <td>{{info.quantity}}</td>
+            <td>{{info.total}}</td>
             <td>
-                <button class="delete">Delete</button>
+                <button @click="deleteItem(index)" class="delete">Delete</button>
                 <button class="edit">Edit</button>
             </td>
         </tr>
@@ -79,6 +81,7 @@ export default {
             price: "",
             catagory: "",
             quantity: "",
+            total : "",
             details: []
         }
     },
@@ -103,7 +106,8 @@ export default {
                 brand: this.brand,
                 price: this.price,
                 catagory: this.catagory,
-                quantity: this.quantity
+                quantity: this.quantity,
+                total: this.price * this.quantity
             }
             this.details.push(data);
             this.id = "" ,
@@ -112,6 +116,9 @@ export default {
                 this.price = "" ,
                 this.catagory = "" ,
                 this.quantity = ""
+        },
+        deleteItem(index){
+            this.details = this.details.filter((info,Toindex) => Toindex != index)
         }
     },
     mounted(){
@@ -119,10 +126,11 @@ export default {
             {
                 id: "12345",
                 name: "Bag",
-                price: "540",
+                price: "100",
                 brand:"VIP",
                 catagory: "Bag",
-                quantity: "4"
+                quantity: "4",
+                total:  100 *4
 
             }
         ];
