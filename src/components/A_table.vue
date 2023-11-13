@@ -25,13 +25,15 @@
           </tr>
   
       </table>
+      <h1>Average : {{ grentTotal }}</h1>
 </template>
 
 <script>
     export default {
         name:"A_table",
         props:[
-            'products'
+            'products',
+            'grentTotal'
         ],
         methods:{
         puja(index){
